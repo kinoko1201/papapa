@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KDHポータルサイト</title>
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- header -->
+  <header>
+  	<h1 class="headline">
+      <a id="title"><font face="ＭＳ ゴシック"><a>KDHポータルサイト</a></font></font>
+</a>
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-list-item"> <a href="kdh.html">KDH-top</a></li>
+      <li class="nav-list-item"> <a href="login.html">login</a></li>
+    </ul>
+  </header>
+  <div class="pagetop">
+  <a class="pagetop-btn" href="#"></a>
+　</div>
+  <script type="text/javascript">
+  $(function () {
+    var $pageTop = $(".pagetop-btn")
+    $pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $pageTop.fadeIn();
+        } else {
+            $pageTop.fadeOut();
+        }
+    })          
+    });
+
+$('a[href^="#"]').click(function () {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 700, "swing");
+        return false;
+    });
+
+$(window).scroll(function () {
+  scrollHeight = $(document).height();  
+        scrollPosition = $(window).height() + $(window).scrollTop();  
+        footHeight = $("footer").innerHeight(); 
+        if ( scrollHeight - scrollPosition  <= footHeight ) { 
+            $(".pagetop-btn").css({
+                "bottom": footHeight + 20
+            });
+        } else { 
+            $(".pagetop-btn").css({
+                "position":"fixed",
+                "bottom": "30px"
+            });
+        }
+});
+    </script>
+
+  <a href="r702kdh.html">令和7年2月</a>
+  <br>
+  <img src="https://illustmint.com/wp-content/uploads/2019/12/february_title_753.png" width="15%" height="15%">
+  <br>
+  
+  <footer>
+　　<ul class="footer-menu">
+     <li>home ｜</li>
+     <li>about ｜</li>
+     <li>service ｜</li>
+     <li>Contact Us</li>
+    </ul>
+    <p>© 2025 NEGIGEN</font></p>
+  </footer>
+</body>
+</html>
