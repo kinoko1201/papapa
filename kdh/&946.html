@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KDHポータルサイト</title>
+  <link rel="stylesheet" type="text/css" href="kdh.css">
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- header -->
+  <header>
+  	<h1 class="headline">
+      <a id="title"><font face="ＭＳ ゴシック"><a>KDHポータルサイト</a></font></font>
+</a>
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-list-item"> <a href="index.html">KDH-top</a></li>
+      <li class="nav-list-item"> <a href="about.html">About</a></li>
+      <li class="nav-list-item"> <a href="../login.html">Login</a></li>
+    </ul>
+  </header>
+  <div class="pagetop">
+  <a class="pagetop-btn" href="#"></a>
+　</div>
+  <script type="text/javascript">
+  $(function () {
+    var $pageTop = $(".pagetop-btn")
+    $pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $pageTop.fadeIn();
+        } else {
+            $pageTop.fadeOut();
+        }
+    })          
+    });
+
+$('a[href^="#"]').click(function () {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 700, "swing");
+        return false;
+    });
+
+$(window).scroll(function () {
+  scrollHeight = $(document).height();  
+        scrollPosition = $(window).height() + $(window).scrollTop();  
+        footHeight = $("footer").innerHeight(); 
+        if ( scrollHeight - scrollPosition  <= footHeight ) { 
+            $(".pagetop-btn").css({
+                "bottom": footHeight + 20
+            });
+        } else { 
+            $(".pagetop-btn").css({
+                "position":"fixed",
+                "bottom": "30px"
+            });
+        }
+});
+    </script>
+
+  <body background="KDHbg03.png">
+
+  <h1>〇釧路市の学校給食の写真</h1>
+  <br>
+  <img src="https://pbs.twimg.com/media/EwQF0y_UUAkkWqK?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EwLENGWUUAIDMYV?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EwLD-DyVcAIVSxq?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EwLDtECUYAU0ZBu?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EvxCrYBUcAMfoAH?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EvhsgO0VgAMeKXr?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EvXdmYcVgAkSOMz?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EvICC5CVoAIzaec?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EvIApPZUYAEWBoj?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Eu9i_p0UcAYqVLm?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EuzTpRuVkAEZzoQ?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EukHGmhVcAAUn8V?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Eue9cvUUcAEjeZh?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EuPhESkUcAIO-50?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Et_zyQNUYAEvilY?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Et1l543VcAI3Ml4?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EtwRgi1UUAECXi-?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EtrMq5CVcAAIMIC?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Etb1WyLVIAAud4P?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EtW3F-_UcAAgbx5?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EtRdWs-UcAEnGbp?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EtMPu-9UUAEa12-?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EtHFx7BUcAEiKzh?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Es3nWOBUwAMZ7Kc?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EsyfizZUcAEb0x2?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Estie87UYAEUqGO?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EsoPaKqUcAAW8On?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/EsnB7x9U0AYMps6?format=jpg&name=240x240">
+  <br>
+  <img src="https://pbs.twimg.com/media/Esm8l4iUcAAGpEa?format=jpg&name=240x240">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <font size="1">※本ウェブサイトの情報は全てフィクションです。実在の人物･団体･事件とは一切関係がありません。</font>
+  <br>
+　<br>
+  
+  <footer>
+　　<ul class="footer-menu">
+     <li>home ｜</li>
+     <li>about ｜</li>
+     <li>service ｜</li>
+     <li>Contact Us</li>
+    </ul>
+    <p>© 2025 Kinetic Dream Harbinger Co., Ltd</font></p>
+  </footer>
+</body>
+</html>
