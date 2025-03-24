@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KDHポータルサイト</title>
+  <link rel="stylesheet" type="text/css" href="kdh.css">
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- header -->
+  <header>
+  	<h1 class="headline">
+      <a id="title"><font face="ＭＳ ゴシック"><a>KDHポータルサイト</a></font></font>
+</a>
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-list-item"> <a href="index.html">Top</a></li>
+      <li class="nav-list-item"> <a href="about.html">About</a></li>
+      <li class="nav-list-item"> <a href="../login.html">Login</a></li>
+    </ul>
+  </header>
+  <div class="pagetop">
+  <a class="pagetop-btn" href="#"></a>
+　</div>
+  <script type="text/javascript">
+  $(function () {
+    var $pageTop = $(".pagetop-btn")
+    $pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $pageTop.fadeIn();
+        } else {
+            $pageTop.fadeOut();
+        }
+    })          
+    });
+
+$('a[href^="#"]').click(function () {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 700, "swing");
+        return false;
+    });
+
+$(window).scroll(function () {
+  scrollHeight = $(document).height();  
+        scrollPosition = $(window).height() + $(window).scrollTop();  
+        footHeight = $("footer").innerHeight(); 
+        if ( scrollHeight - scrollPosition  <= footHeight ) { 
+            $(".pagetop-btn").css({
+                "bottom": footHeight + 20
+            });
+        } else { 
+            $(".pagetop-btn").css({
+                "position":"fixed",
+                "bottom": "30px"
+            });
+        }
+});
+    </script>
+
+  <body background="KDHbg03.png">
+
+  <h1>〇令和4年度（中学1年生）の献立一覧</h1>
+  <br>
+  <a href="https://www.city.kurume.fukuoka.jp/1060manabi/2020kyouiku/3130kyusyoku/files/8.R4.4.pdf">令和4年4月</a>
+  <br>
+  <font size="3">管理者コメント<br>入学式後初めての給食は4月11日です。<br>小学生の頃、教育実習生が諏訪中の給食は不味過ぎると批判していたことを思い返しながら、<br>卵スープを恐る恐る口へと運び「意外といけるじゃん」と思った直後、<br>カチカチの赤飯を食べて戦慄したのを鮮明に覚えています。<br>もう中学校も卒業したなんて、、、<br>時の流れは早いものです。</font>
+  <br>
+  <a href="">令和4年5月</a>
+  <br>
+  <br>
+  <a href="">令和4年6月</a>
+  <br>
+  <br>
+  <a href="">令和4年7月</a>
+  <br>
+  <br>
+  <a href="">令和4年8月</a>
+  <br>
+  <br>
+  <a href="">令和4年9月</a>
+  <br>
+  <br>
+  <a href="">令和4年10月</a>
+  <br>
+  <br>
+  <a href="">令和4年11月</a>
+  <br>
+  <br>
+  <a href="">令和4年12月</a>
+  <br>
+  <br>
+  <a href="">令和5年1月</a>
+  <br>
+  <br>
+  <a href="">令和5年2月</a>
+  <br>
+  <br>
+  <a href="">令和5年3月</a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <font size="4">DNSを変更しました(Github to Netlify to f5.si)</font>
+  <br>
+  <br>
+  <font size="1">※本ウェブサイトの情報は全てフィクションです。実在の人物･団体･事件とは一切関係がありません。</font>
+  <br>
+　<br>
+  
+  <footer>
+　　<ul class="footer-menu">
+     <li>home ｜</li>
+     <li>about ｜</li>
+     <li>service ｜</li>
+     <li>Contact Us</li>
+    </ul>
+    <p>© 2025 Kinetic Dream Harbinger Co., Ltd</font></p>
+  </footer>
+</body>
+</html>
