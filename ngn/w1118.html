@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>某ショタコン語録まとめサイト</title>
+  <link rel="stylesheet" type="text/css" href="kdh.css">
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body bgcolor="#dcdcdc">
+<!-- header -->
+  <header>
+  	<h1 class="headline">
+      <a id="title"><font face="ＭＳ ゴシック"><a>某ショタコン語録まとめサイト</a></font></font>
+</a>
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-list-item"> <a href="w1118.html">Top</a></li>
+      <li class="nav-list-item"> <a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <div class="pagetop">
+  <a class="pagetop-btn" href="#"></a>
+　</div>
+  <script type="text/javascript">
+  $(function () {
+    var $pageTop = $(".pagetop-btn")
+    $pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $pageTop.fadeIn();
+        } else {
+            $pageTop.fadeOut();
+        }
+    })          
+    });
+
+$('a[href^="#"]').click(function () {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+            scrollTop: position
+        }, 700, "swing");
+        return false;
+    });
+
+$(window).scroll(function () {
+  scrollHeight = $(document).height();  
+        scrollPosition = $(window).height() + $(window).scrollTop();  
+        footHeight = $("footer").innerHeight(); 
+        if ( scrollHeight - scrollPosition  <= footHeight ) { 
+            $(".pagetop-btn").css({
+                "bottom": footHeight + 20
+            });
+        } else { 
+            $(".pagetop-btn").css({
+                "position":"fixed",
+                "bottom": "30px"
+            });
+        }
+});
+    </script>
+
+  <h1>〇某ショタコン語録まとめサイト　トップページ</h1>
+　<br>
+  <font size="3">某ショタコンの発言をまとめて掲載しています。<br>まだまだ数が少ないので、このサイトを見ている皆さんと協力し<br>どんどん数を増やしていきたいと思っております。<br>以下の「語録追加を提案する」のページから管理者へメールを送信してください。<br>あくまで事実に基づいて運営している為、虚偽の情報を送信することは<br>固く禁止させて頂きます。</font>
+　<br>
+　<br>
+　<a href="contact.html">語録追加を提案する</a>
+　<br>
+　<br>
+  <br>
+　<br>
+  <br>
+　<br>
+　<h1>〇某ショタコン語録一覧</h1><font size="3">※最終更新：2025年3月25日20時14分</font>
+  
+  <footer>
+　　<ul class="footer-menu">
+     <li>home ｜</li>
+     <li>about ｜</li>
+     <li>service ｜</li>
+     <li>Contact Us</li>
+    </ul>
+    <p>© 2025 ?????</font></p>
+  </footer>
+</body>
+</html>
